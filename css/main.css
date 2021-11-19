@@ -14,7 +14,7 @@ html {
   --sec-padding: 50px;
   --sec-color: #f9f9f9;
   --white-color: #fff;
-  --red-color: #e65f78;
+  --green-color: #3aa;
   --black-color: #000;
   --overlay: rgba(0, 0, 0, 0.6);
   --box-shadow: 0px 0px 20px rgb(0 0 0 / 9%);
@@ -67,7 +67,7 @@ img {
   gap: 20px;
 }
 .title p {
-  color: var(--red-color);
+  color: var(--green-color);
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -94,8 +94,11 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-header img {
-  height: 90px;
+header .logo h2 {
+  font-weight: 800;
+  font-size: 55px;
+  color: white;
+  transform: scale(1.2);
 }
 header nav {
   display: flex;
@@ -126,16 +129,20 @@ header a {
   transition: 0.3s;
 }
 header a.active {
-  color: var(--red-color);
+  color: var(--green-color);
 }
 header li:hover a {
-  color: var(--red-color);
+  color: var(--green-color);
 }
 @media (max-width: 991px) {
+  header .logo h2 {
+    color: var(--green-color);
+    position: relative;
+    left: 10px;
+  }
   header {
     background-color: var(--white-color);
   }
-
   header i {
     display: block;
   }
@@ -153,7 +160,7 @@ header li:hover a {
   header ul a {
     color: black;
   }
-  header nav i:hover ~ ul {
+  header nav:hover ul {
     display: flex;
   }
 }
@@ -161,7 +168,7 @@ header li:hover a {
 
 /* START LANDING */
 .landing {
-  background-image: url(../images/landing.jpg);
+  background-image: url(../images/land.jpg);
   height: 100vh;
   position: relative;
   background-size: cover;
@@ -205,7 +212,7 @@ header li:hover a {
   font-weight: 800;
 }
 .landing span {
-  color: var(--red-color);
+  color: var(--green-color);
 }
 .landing p {
   color: white;
@@ -249,7 +256,6 @@ header li:hover a {
   }
 }
 .about .image {
-  border: 10px solid var(--black-color);
   min-width: 400px;
 }
 @media (max-width: 767px) {
@@ -258,13 +264,11 @@ header li:hover a {
   }
 }
 .about img {
-  position: relative;
   max-height: 415.63px;
   max-width: 380px;
-  top: -10px;
-  left: -10px;
   width: 100%;
   height: 100%;
+  border-radius: 15px;
 }
 .about .box:last-of-type {
   display: flex;
@@ -292,7 +296,7 @@ header li:hover a {
   color: #777;
 }
 .about .naming p {
-  color: var(--red-color);
+  color: var(--green-color);
   width: 0;
   overflow: hidden;
   animation: write-job 10s steps(11) infinite;
@@ -306,7 +310,7 @@ header li:hover a {
   }
 }
 .about .box > p span {
-  color: var(--red-color);
+  color: var(--green-color);
 }
 .flex-sub-box {
   display: flex;
@@ -326,7 +330,7 @@ header li:hover a {
   white-space: nowrap;
 }
 .sub-box i {
-  color: var(--red-color);
+  color: var(--green-color);
   margin-right: 10px;
 }
 .sub-box p > span,
@@ -353,7 +357,7 @@ header li:hover a {
 }
 .flex-sub-box + a {
   color: var(--white-color);
-  background-color: var(--red-color);
+  background-color: var(--green-color);
   width: fit-content;
   padding: 15px 25px;
 }
@@ -383,7 +387,7 @@ header li:hover a {
   box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
 }
 .qual i {
-  color: var(--red-color);
+  color: var(--green-color);
   font-size: 46px;
 }
 .qual h3 {
@@ -395,7 +399,7 @@ header li:hover a {
   color: #777;
 }
 .qual .box p span {
-  color: #eb7b8f;
+  color: #3aa;
 }
 /* END QUALITY progress */
 
@@ -499,7 +503,7 @@ form textarea:focus::placeholder {
 }
 .contact form input:nth-child(4) {
   border: none;
-  background-color: var(--red-color);
+  background-color: var(--green-color);
   width: fit-content;
   color: var(--white-color);
   padding: 15px 25px;
@@ -565,7 +569,7 @@ footer .icons i {
 }
 .wishlist .sub-title {
   padding: 15px 40px;
-  background-color: var(--red-color);
+  background-color: var(--green-color);
   color: var(--white-color);
 }
 .wishlist ul {
@@ -589,7 +593,7 @@ footer .icons i {
   transform: translateY(-50%);
   width: 15px;
   height: 3px;
-  background-color: var(--red-color);
+  background-color: var(--green-color);
   transition: 1s;
 }
 .wishlist li:hover::before {
@@ -599,7 +603,7 @@ footer .icons i {
   box-shadow: var(--box-shadow);
 }
 .wishlist span {
-  color: var(--red-color);
+  color: var(--green-color);
   font-size: inherit;
 }
 /* END WISHLIST */
