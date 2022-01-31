@@ -443,6 +443,11 @@ header a.active {
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  transition: 1s;
+  transform: translateX(-140%);
+}
+.about img.slide {
+  transform: translateX(0);
 }
 .about .box:last-of-type {
   display: flex;

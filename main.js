@@ -115,3 +115,37 @@ window.onload = function () {
   document.querySelector(".name h1").style.cssText =
     " animation: animate-name 3s steps(11) forwards;";
 };
+
+function photo() {
+  const section = document.querySelector(".about");
+  const image = document.querySelector(".about img");
+  let imageHolder = document.querySelector(".about .container");
+
+  function slideIn() {
+    const distanceFromTop =
+      image.scrollTop + image.getBoundingClientRect().height / 1.4;
+    const windowsScroll = window.scrollY;
+
+    if (windowsScroll >= distanceFromTop) {
+      image.classList.add("slide");
+    }
+  }
+
+  function movePhoto(e) {
+    // setting transform 3d styles
+    let { offsetY: y, offsetX: x } = e;
+    let { width, height } = image.getBoundingClientRect();
+    let xPercent = Math.floor((x / width) * 100);
+    let yPercent = Math.floor((y / height) * 100);
+
+    if (xPercent < 50) {
+      image.style.transform = `rotateY(-10deg)`;
+    } else if (xPercent >= 50) {
+      image.style.transform = `rotateY(10deg)`;
+    }
+  }
+
+  image.addEventListener("mousemove", movePhoto);
+  window.addEventListener("scroll", slideIn);
+}
+photo();
