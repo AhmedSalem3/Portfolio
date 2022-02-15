@@ -5,7 +5,6 @@ function header() {
 
   let lastScrollY = 0;
   function check() {
-    console.log("hi");
     let scrollTop = document.documentElement.scrollTop;
     if (lastScrollY < scrollTop) {
       header.style.top = "-100%";
@@ -109,13 +108,8 @@ function lighting() {
   };
 }
 lighting();
+
 //
-
-window.onload = function () {
-  document.querySelector(".name h1").style.cssText =
-    " animation: animate-name 3s steps(11) forwards;";
-};
-
 function photo() {
   const section = document.querySelector(".about");
   const image = document.querySelector(".about img");
@@ -131,21 +125,79 @@ function photo() {
     }
   }
 
-  function movePhoto(e) {
-    // setting transform 3d styles
-    let { offsetY: y, offsetX: x } = e;
-    let { width, height } = image.getBoundingClientRect();
-    let xPercent = Math.floor((x / width) * 100);
-    let yPercent = Math.floor((y / height) * 100);
-
-    if (xPercent < 50) {
-      image.style.transform = `rotateY(-10deg)`;
-    } else if (xPercent >= 50) {
-      image.style.transform = `rotateY(10deg)`;
-    }
-  }
-
-  image.addEventListener("mousemove", movePhoto);
   window.addEventListener("scroll", slideIn);
 }
 photo();
+
+//
+function slideInAnimation() {
+  let qualifications = document.querySelector(".qualifications-content");
+  let books = document.querySelector(".books-content");
+  let wishList = document.querySelector(".wishlist-content");
+
+  let scrollSections = [qualifications, books, wishList];
+
+  // addding scrolled out classes
+  scrollSections.forEach((section) => {
+    section.classList.add("scrolledOut");
+  });
+
+  // this is the observer which will toggle the scrolling classes
+  let observer = new IntersectionObserver((enteries) => {
+    enteries.forEach((entry) => {
+      entry.isIntersecting ? entry.target.classList.remove("scrolledOut") : "";
+    });
+  });
+
+  scrollSections.forEach((section) => {
+    observer.observe(section);
+  });
+}
+slideInAnimation();
+
+// setting my projects from the JSON file to HTML
+function getProjects() {
+  async function projectsData() {
+    let response = await fetch("projects.json");
+
+    let data = await response.json();
+
+    embedProjects(data);
+  }
+  projectsData();
+
+  function embedProjects(projects) {
+    let projectHolder = document.querySelector(
+      ".projects .container .projects-content"
+    );
+    console.log(projectHolder);
+
+    projects.forEach((project) => {
+      let { link, image, description, languages, title, category, createdOn } =
+        project;
+
+      let projectHTML = `
+      <a class="project ${category}" href=${link} target="_blank" >
+      <div class="image">
+          <img src=${image} alt="project">
+          </div>
+          <div class="text">
+              <h3>${title}</h3>
+              <p>${description}</p>
+              <div class="details">
+                  <div class="languages">
+                      <ion-icon name="time-outline"></ion-icon> ${languages}
+                  </div>
+                  <div class="date">
+                      ${createdOn}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </a>
+      `;
+      projectHolder.innerHTML += projectHTML;
+    });
+  }
+}
+getProjects();

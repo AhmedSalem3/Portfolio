@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Dev</title>
+    <title>Ahmed Essam - Frontend Developer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- main css -->
     <link rel=" stylesheet" href="css/main.css">
@@ -27,25 +27,14 @@
     </span>
     <!-- END TO TOP BUTTON -->
 
-    <!-- START SOCIAL FLY -->
-    <div class="middle">
-        <a href="https://www.facebook.com/profile.php?id=100012375963255" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto: domysalem10@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/ahmed-essam-97497a223" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-    <!-- END SOCIAL FLY -->
+
 
     <!-- START HEADER -->
+
     <header>
         <div class="container">
             <div class="logo">
-                <h2>A</h2>
+                <img src="images/try52.jpg" alt="">
             </div>
             <nav>
                 <!-- <i class="fas fa-bars"></i> -->
@@ -73,15 +62,27 @@
         <div class="container">
             <div class="intro">
                 <div class="image">
-                    <img src="images/try52.jpg" alt="">
+                    <img src="images/try52.jpg" alt="" data-tilt data-tilt-scale="1.1">
                 </div>
-                <div class="name">
-                    <h1>Ahmed <span>Essam</span></h1>
-                    <span class="caret"></span>
+                <div class="brief-intro-wrapper">
+                    <div class="name">
+                        <h1>Ahmed Essam</h1>
+                        <span class="caret"></span>
+                    </div>
+                    <p>I'm a Front End Developer</p>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/profile.php?id=100012375963255"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ahmed_essam020/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ahmed-essam-97497a223"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto: domysalem10@gmail.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Domyygamer"><i class="fab fa-github"></i></a>
+
+                    </div>
                 </div>
-                <p>I'm a Front End Developer</p>
             </div>
-            <i class="fas fa-angle-double-down"></i>
+            <!-- <i class="fas fa-angle-double-down"></i> -->
         </div>
     </div>
     <!-- END LANDING -->
@@ -96,7 +97,7 @@
             <div class="about-content">
                 <div class="box">
                     <div class="image">
-                        <img src="images/personal-pic2.jpg" alt="">
+                        <img src="images/personal-pic2.jpg" alt="" data-tilt data-tilt-full-page-listening>
                     </div>
                 </div>
                 <div class="box">
@@ -114,7 +115,7 @@
                     <div class="flex-sub-box">
                         <div class="sub-box">
                             <p> <i class="fas fa-gift"></i> Birthday: <span>10.02.2005</span></p>
-                            <p><i class="far fa-calendar-alt"></i> Age: <span>16</span></p>
+                            <p><i class="far fa-calendar-alt"></i> Age: <span>17</span></p>
                             <p><i class="fas fa-map-marker-alt"></i> Citizenship: <a href="">Egypt</a></p>
                             <p><i class="fas fa-gamepad"></i> Interests:<span>Coding, Volunteering</span></p>
                         </div>
@@ -126,7 +127,13 @@
                             <p><i class="fas fa-phone-alt phone"></i>Phone: <a href="">Private</a></p>
                         </div>
                     </div>
-                    <a href="">Download Resume</a>
+                    <a class="cta resume" href="#services">
+                        <span>Download Resume</span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -246,6 +253,24 @@
     </div>
     <!-- End qualifications -->
 
+    <!-- START PROJECTS -->
+    <div class="projects">
+        <div class="container">
+
+            <div class="title">
+                <p>Work</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-content">
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- END PROJECTS -->
+
     <!-- START PLANNING -->
     <div class="planning" id="prog">
         <div class="container">
@@ -253,7 +278,7 @@
                 <p>Future</p>
                 <h2>In Progress</h2>
             </div>
-            <div class="planning-content">
+            <div class="planning-content " data-tilt>
                 <div class="box">
                     <div class="image">
                         <img src="images/roadmap.jpg" alt="">
@@ -567,7 +592,7 @@
         </div>
     </footer>
     <!-- END footer -->
-
+    <script src="tilt.js"></script>
     <script src="main.js"></script>
 </body>
 
