@@ -1,0 +1,33 @@
+[
+
+    {
+        "category": "Sliders Blogs JSON",
+        "link": "https://domyygamer.github.io/The-Tutor/",
+        "image": "images/projects/The-Tutor.webp",
+        "title": "The Tutor",
+        "description": "I have created this project to help people reaching their goals",
+        "languages": "HTML CSS JS JSON", 
+        "createdOn": "03/09/2021"
+    }, 
+    {
+        "category": "Sliders Animations",
+        "link": "https://domyygamer.github.io/Space-Challange/",
+        "image": "images/projects/Space-Project.webp",
+        "title": "Space Tourism",
+        "description": "A challange by Frontend Mentor. It is focused on aniamtion sliders",
+        "languages": "HTML CSS JS", 
+        "createdOn": "12/01/2022"
+    },
+    {
+        "category": "Landing-Page Animations",
+        "link": "https://domyygamer.github.io/The-7/",
+        "image": "images/projects/The-7.webp",
+        "title": "The 7",
+        "description": "Landing Page with all sections you can think of.",
+        "languages": "HTML CSS JS", 
+        "createdOn": "03/09/2021"
+    }
+
+
+
+]

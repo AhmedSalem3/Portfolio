@@ -1,0 +1,58 @@
+@import "../sass/layout/global-rules";
+@import "../sass/pages/header";
+@import "../sass/pages/footer";
+@import "../sass/helpers/mixins";
+
+.projects {
+  padding: 100px 0;
+  .container {
+    @include flex-layout(column, center, center, 100px);
+
+    .project {
+      @include flex-layout(row, center, center, 30px);
+      text-align: center;
+      overflow: hidden;
+
+      &.scrolled-out > {
+        .image {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        .description {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+
+      @include breakpoint(mobile) {
+        flex-direction: column;
+      }
+
+      .image {
+        flex: 2;
+        transition: opacity 1s, transform 0.7s;
+      }
+      .description {
+        flex: 1;
+        transition: opacity 1s, transform 0.7s;
+        @include flex-layout(column, center, null, 20px);
+
+        .title {
+          font-size: 2.2rem;
+          color: #000;
+          text-transform: uppercase;
+        }
+        .info {
+          font-size: 1.2rem;
+          color: #777;
+        }
+        a.view {
+          display: inline-flex;
+          justify-content: center;
+          max-width: 250px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

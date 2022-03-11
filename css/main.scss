@@ -1,0 +1,10 @@
+@import "../sass/layout/global-rules";
+@import "../sass/pages/header";
+
+// importing the styles of the home page with normal css syntax
+//TODO will change css syntax later
+@import "../sass/pages/home";
+
+@import "../sass/pages/footer";
+@import "../sass/helpers/mixins";
+@import "../sass/variables/colors";

@@ -1,0 +1,25 @@
+/* START FOOTER */
+footer {
+  padding: calc(var(--sec-padding) - 15px) 0;
+  background-color: var(--black-color);
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  color: var(--white-color);
+  font-size: 18px;
+}
+
+footer span {
+  color: var(--green-color);
+}
+footer p i {
+  color: #bb001b;
+  padding: 0 3px;
+}
+/* END FOOTER */

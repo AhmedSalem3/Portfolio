@@ -1,0 +1,216 @@
+/* Start Global Values */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Mulish", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --sec-padding: 50px;
+  --sec-color: #f9f9f9;
+  --white-color: #fff;
+  --green-color: #3aa;
+  --black-color: #000;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --box-shadow: 0px 0px 20px rgb(0 0 0 / 9%);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Values */
+
+/* START COMPONENTS */
+body.menu-on {
+  position: relative;
+}
+body.menu-on::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+span.to-top {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--green-color);
+  padding: 10px 12px;
+  font-size: 17px;
+  z-index: 5000;
+  color: var(--white-color);
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.8s, filter 0.3s;
+}
+span.to-top:hover {
+  filter: drop-shadow(0 0 3px var(--green-color));
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title p {
+  color: var(--green-color);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.title h2 {
+  font-weight: 800;
+  font-size: 35px;
+  color: black;
+  margin-bottom: 100px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.icons i {
+  color: var(--white-color);
+  font-size: 20px;
+  transition: 0.3s;
+}
+.icons i:hover {
+  color: var(--green-color);
+}
+
+/* class for elements slidingIn animations */
+.scrolledOut > * {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Button Style 1 */
+/* From cssbuttons.io by @adamgiebl */
+button.show-more,
+a.view {
+  position: relative;
+  cursor: pointer;
+  margin-top: 50px;
+  left: 50%;
+  font-size: 16px;
+  padding: 1em 3.3em;
+  transform: perspective(200px) rotateX(15deg) translateX(-50%);
+  color: white;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    0deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(70, 135, 252, 1) 100%
+  );
+  box-shadow: rgba(63, 94, 251, 0.2) 0px 40px 29px 0px;
+  will-change: transform;
+  transition: all 0.3s;
+  border-bottom: 2px solid rgba(70, 135, 252, 1);
+}
+
+button.show-more:hover,
+a.view:hover {
+  transform: perspective(180px) rotateX(30deg) translateY(2px) translateX(-50%);
+}
+
+/*  Button style 2 */
+/* From cssbuttons.io by @alexmaracinaru */
+.cta {
+  position: relative;
+  /* margin: auto; */
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  align-items: center;
+  width: fit-content;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+/* END COMPONENTS */

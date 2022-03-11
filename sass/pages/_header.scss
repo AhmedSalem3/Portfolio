@@ -1,0 +1,130 @@
+/* START HEADING */
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+  min-height: 78px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.575);
+  background-color: #40404094;
+  -webkit-transition: top 0.8s;
+  transition: top 0.8s;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  border-radius: 50%;
+  width: 50px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header i {
+  font-size: 25px;
+  padding: 30px 15px;
+}
+
+header .menu {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  direction: rtl;
+  transition: 0.3s;
+}
+header .menu span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white-color);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+header .menu span:nth-child(2) {
+  width: 15px;
+}
+header .menu.active span:nth-child(2) {
+  opacity: 0;
+}
+header .menu.active span:nth-child(1) {
+  transform: rotate(-44deg);
+  top: 9px;
+  position: relative;
+}
+header .menu.active span:nth-child(3) {
+  transform: rotate(44deg);
+  top: -9px;
+  position: relative;
+}
+
+@media (min-width: 1050px) {
+  header nav ul {
+    display: flex;
+  }
+  header .menu {
+    display: none !important;
+  }
+}
+header li {
+  padding: 17px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header li.support img {
+  width: 145px;
+}
+header a {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.3s;
+}
+header a.active {
+  color: var(--green-color);
+}
+
+@media (max-width: 1049px) {
+  header .logo h2 {
+    position: relative;
+    left: 10px;
+  }
+  header ul {
+    position: absolute;
+    top: 108px;
+    left: 50%;
+    width: 93%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    display: none;
+    padding: 20px 0;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 1.7s;
+  }
+  header li {
+    padding: 16px 15px;
+    text-align: center;
+  }
+  header ul a {
+    color: black;
+    font-size: 17px;
+  }
+  header nav ul.active {
+    display: flex;
+  }
+  header nav ul.opacity-on {
+    opacity: 1;
+  }
+}
+/* END HEADING */
