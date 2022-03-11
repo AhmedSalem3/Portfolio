@@ -6,9 +6,8 @@ header();
 
 // fetching projects
 async function projects() {
-  let response = await fetch("../all-projects.json");
+  let response = await fetch("all-projects.json");
   let data = await response.json();
-  console.log(data);
 
   let projectsHolder = document.querySelector("[data-projects]");
 
@@ -90,7 +89,6 @@ function startObserving() {
   );
 
   let allProjects = document.querySelectorAll(".project");
-  console.log(allProjects);
 
   allProjects.forEach((project) => observer.observe(project));
 }
