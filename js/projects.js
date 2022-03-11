@@ -6,7 +6,7 @@ header();
 
 // fetching projects
 async function projects() {
-  let response = await fetch("../all-projects.json");
+  let response = await fetch("/all-projects.json");
   let data = await response.json();
   console.log(data);
 
